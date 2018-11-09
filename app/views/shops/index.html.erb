@@ -1,0 +1,6 @@
+<h1>Shops</h1>
+<p>Click a shop to see the shops where books were sold</p>
+
+<%@shops.each do |shop|%>
+    <li><%=link_to shop.name, {:action => "show", :id => shop.id},:target => "_blank" %></li>
+<% end %>

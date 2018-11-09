@@ -1,0 +1,9 @@
+<h1>Publishers</h1>
+<p>Click a publisher to see the shops they have their books in</p>
+
+<%@publishers.each do |publisher|%>
+  <li><%= link_to publisher.name, {:action => "show", :id => publisher.id}, :target => "_blank"%>  </li>
+    
+<% end %>
+
+<h3><%=link_to  "Go to shops", {controller: "shops",:action => "index"} %></h3>
